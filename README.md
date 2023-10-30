@@ -19,7 +19,7 @@ Just add this extension. No further registrations required.
 
 ## Screenshots
 
-{ Include at least one screenshot or video. }
+![Alt Text](demo.gif)
 
 ## Collaborators
 

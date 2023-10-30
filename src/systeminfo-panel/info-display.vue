@@ -7,14 +7,6 @@
                 </p>
                 <div v-if="isObj(value)">
                     <InfoDisplay :value="value" />
-                    <!-- <ul v-if="isObj()">
-					<li v-for="(value2, name2, index2) in value" :key="index2">
-						<p>
-							<strong>{{ name2 }}</strong>
-						</p>
-						<span>{{ value2 }}</span>
-					</li>
-				</ul> -->
                 </div>
                 <div v-else-if="Array.isArray(value)">
                     <span v-if="!isObj(value[0])" style="margin-top: 20px">
@@ -131,8 +123,8 @@ th {
 
 td {
     padding: 10px;
-    border-right: solid 1px #f00;
-    border-left: solid 1px #f00;
+    border-right: solid 1px var(--border-subdued);
+    border-left: solid 1px var(--border-subdued);
 }
 
 table {

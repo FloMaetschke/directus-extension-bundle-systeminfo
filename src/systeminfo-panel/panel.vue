@@ -3,7 +3,7 @@
 		<div v-if="loading">
             Collecting System Informations, please wait ...
         </div>
-		<InfoDisplay :value="results" root="true"></InfoDisplay>
+		<InfoDisplay :value="results" :root=true></InfoDisplay>
 
 		<!-- <ul>
 			<li v-for="(value, name, index) in results" :key="index">
@@ -52,6 +52,7 @@ onMounted(async () => {
 
 async function getSystemInfo() {
 	const result = await api.get('/systeminfo')
+	delete result.data.version;
 	results.value = result.data;
 	loading.value = false;
 }
