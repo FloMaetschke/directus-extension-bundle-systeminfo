@@ -11,6 +11,8 @@ Used Directus extensions: bundle, endpoint and panel.
 
 Next, one could further refine the presentation of the data. For example, visualize with graphs or simply format better.
 The new auto-reload feature would have been nice as well, but unfortunately I haven't found any documentation in Directus about it yet.
+The endpoint is public, so please keep this in mind. If you know a way how to only expose it for authorized users, please let me know.
+
 I had to think for a while to come up with a suitable idea for the hackathon. It had to be something that Directus could still use in the future. In other words, it should bring a generic, real added value. I think the system information of the Directus host can be used for a lot of things, especially as an analysis tool for debugging or benchmarking.
 
 ## Set Up Instructions
