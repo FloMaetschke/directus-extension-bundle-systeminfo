@@ -1,0 +1,48 @@
+{
+	"name": "directus-extension-bundle-systeminfo",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "Please enter a description for your extension",
+	"icon": "extension",
+	"dependencies": {
+		"numeral": "^2.0.6",
+		"systeminformation": "^5.21.15"
+	},
+	"directus:extension": {
+		"host": "^10.1.14",
+		"type": "bundle",
+		"path": {
+			"app": "dist/app.js",
+			"api": "dist/api.js"
+		},
+		"entries": [
+			{
+				"type": "endpoint",
+				"name": "systeminfo-endpoint",
+				"source": "src/systeminfo-endpoint/index.ts"
+			},
+			{
+				"type": "panel",
+				"name": "systeminfo-panel",
+				"source": "src/systeminfo-panel/index.ts"
+			}
+		]
+	},
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-custom-bundle"
+	],
+	"scripts": {
+		"build": "directus-extension build",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link",
+		"add": "directus-extension add"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "10.1.14",
+		"@types/node": "^20.8.9",
+		"typescript": "^5.2.2",
+		"vue": "^3.3.7"
+	}
+}
